@@ -17,6 +17,7 @@ public class GunShot : MonoBehaviour
     }
 
     public void Shot() {
-        Instantiate(Bullet, Vector3.zero, Quaternion.identity);
+        GameObject bullet = Instantiate(Bullet, Bullet.transform.position, Bullet.transform.rotation);
+        bullet.SetActive(true);
     }
 }
