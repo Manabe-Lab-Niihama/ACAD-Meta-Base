@@ -18,13 +18,18 @@ public class Bullet01 : MonoBehaviour
         
     }
 
-    void OnCollisionEnter(Collision collision) {
+    void OnCollisionEnter(Collision other) {
        //Destroy(this.gameObject);
-       GameObject oni = GameObject.Find("Capsule");
-       if (oni != null)
+       if (other.gameObject.CompareTag("Enemy"))
         {
-           Destroy(oni); 
+            GameObject oni = other.gameObject;
+
+            if (oni != null)
+            {
+                Destroy(oni); 
+            }
         }
+       
        
     }
     
