@@ -2,16 +2,21 @@ using UnityEngine;
 
 public class Enemy01 : MonoBehaviour
 {
-    [SerializeField] GameObject prefab;
+    [SerializeField] GameObject[] prefab;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        float x = Random.Range(-8f, 8f);
-        float z = Random.Range(-8f, 8f);
+        for(int i = 0; i < 10; i++)
+        {
+            int randomIndex = Random.Range(0, prefab.Length);
+            float x = Random.Range(-8f, 8f);
+            float z = Random.Range(-8f, 8f);
 
-        Vector3 spawnPos = new Vector3(x, 0f, z);
+            Vector3 spawnPos = new Vector3(x, 0f, z);
 
-        Instantiate(prefab, spawnPos, Quaternion.identity);
+            Instantiate(prefab[randomIndex], spawnPos, Quaternion.identity);
+        }
+        
     }
 
     // Update is called once per frame
