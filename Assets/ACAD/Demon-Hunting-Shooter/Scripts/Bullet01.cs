@@ -9,7 +9,7 @@ public class Bullet01 : MonoBehaviour
     {
         rb = this.GetComponent<Rigidbody>();
 
-        rb.AddForce(this.transform.forward*60, ForceMode.Impulse); 
+        rb.AddForce(this.transform.forward*40, ForceMode.Impulse); 
     }
     // Update is called once per frame
     void Update()
