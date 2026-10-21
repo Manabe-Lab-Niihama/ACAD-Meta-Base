@@ -20,7 +20,7 @@ public class Bullet01 : MonoBehaviour
 
     void OnCollisionEnter(Collision other) {
        //Destroy(this.gameObject);
-       if (other.gameObject.CompareTag("Enemy"))
+       if (other.CompareTag("Enemy"))
         {
             GameObject oni = other.gameObject;
 
