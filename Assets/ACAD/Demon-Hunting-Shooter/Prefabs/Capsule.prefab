@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 655811942720230473}
   - component: {fileID: 7265812740765838171}
   - component: {fileID: 6867623384570616489}
+  - component: {fileID: 9092522330019884557}
+  - component: {fileID: -3827542302457452664}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Enemy
@@ -157,3 +159,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Enemy01
   prefab:
   - {fileID: 0}
+--- !u!114 &9092522330019884557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5183183504029301918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff09dfd3513b1c84084cb515bfab5ac0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyChase
+  PlayerTransform: {fileID: 5675508713417357592, guid: f741cb35a628f5e47a476e4702d8b307, type: 3}
+--- !u!195 &-3827542302457452664
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5183183504029301918}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 1
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
