@@ -3,6 +3,7 @@ using UnityEngine.Rendering.Universal;
 
 public class Bullet01 : MonoBehaviour
 {
+    [SerializeField] private GameManager manager;
     private Rigidbody rb;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
@@ -27,6 +28,7 @@ public class Bullet01 : MonoBehaviour
             if (oni != null)
             {
                 Destroy(oni); 
+                manager.PlusCount();
             }
         }
        
