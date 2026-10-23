@@ -31,6 +31,17 @@ public class Bullet01 : MonoBehaviour
                 manager.PlusCount();
             }
         }
+
+        if (other.gameObject.name == "Start")
+        {
+            GameObject start = other.gameObject;
+
+            if (start != null)
+            {
+                Destroy(start); 
+                manager.state = GameState.Playing;
+            }
+        }
        
        
     }
