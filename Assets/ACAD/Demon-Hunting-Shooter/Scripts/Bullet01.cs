@@ -39,7 +39,7 @@ public class Bullet01 : MonoBehaviour
             if (start != null)
             {
                 Destroy(start); 
-                manager.state = GameState.Playing;
+                manager.state = GameState.Redy;
             }
         }
        
