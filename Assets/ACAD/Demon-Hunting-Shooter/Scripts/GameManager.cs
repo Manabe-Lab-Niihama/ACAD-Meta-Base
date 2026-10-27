@@ -8,6 +8,9 @@ public class GameManager : MonoBehaviour
 
     private int count;
 
+    private float starttime;
+
+    private float nowtime;
 
     [SerializeField] GameObject start;
 
@@ -25,15 +28,24 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (start == null && state != GameState.Playing)
+        if (start == null && state == GameState.Redy)
         {
             state = GameState.Playing;
             Debug.Log("スタート");
+            starttime = Time.time;
+            Debug.Log($"{starttime:F2}");
+
         }
 
         if (state == GameState.Playing)
         {
-            Debug.Log("プレイ中");
+            nowtime = Time.time;
+            if(nowtime - starttime >= 60)
+            {
+                state = GameState.Finish;
+                Debug.Log("フィニッシュ");
+                Debug.Log($"{nowtime-starttime:F2}");
+            }
         }
     }
 }

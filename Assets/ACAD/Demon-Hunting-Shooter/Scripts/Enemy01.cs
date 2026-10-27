@@ -41,5 +41,14 @@ public class Enemy01 : MonoBehaviour
                 
             }
         }
+
+        if (manager.state == GameState.Finish)
+        {
+            for(int i = 0; i < 10; i++)
+            {
+                Destroy(enemy[i]);
+                
+            }
+        }
     }
 }
