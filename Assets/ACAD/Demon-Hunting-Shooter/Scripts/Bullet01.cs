@@ -20,6 +20,17 @@ public class Bullet01 : MonoBehaviour
     }
 
     void OnCollisionEnter(Collision other) {
+
+        if (manager.state != GameState.Playing && other.gameObject.name == "Start")
+        {
+            GameObject start = other.gameObject;
+
+            if (start != null)
+            {
+                Destroy(start); 
+                manager.state = GameState.Redy;
+            }
+        }
        //Destroy(this.gameObject);
        if (other.gameObject.CompareTag("Enemy"))
         {
@@ -31,18 +42,6 @@ public class Bullet01 : MonoBehaviour
                 manager.PlusCount();
             }
         }
-
-        if (other.gameObject.name == "Start")
-        {
-            GameObject start = other.gameObject;
-
-            if (start != null)
-            {
-                Destroy(start); 
-                manager.state = GameState.Redy;
-            }
-        }
-       
        
     }
     

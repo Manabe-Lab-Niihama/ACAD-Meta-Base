@@ -411,7 +411,7 @@ Transform:
   m_GameObject: {fileID: 373803018}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.6, y: 0.5, z: 9.03}
+  m_LocalPosition: {x: 4, y: 0.5, z: 4.78}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -566,6 +566,7 @@ GameObject:
   - component: {fileID: 937396690}
   - component: {fileID: 937396689}
   - component: {fileID: 937396688}
+  - component: {fileID: 937396692}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
@@ -666,6 +667,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &937396692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 937396687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshModifier
+  m_SerializedVersion: 0
+  m_OverrideArea: 1
+  m_Area: 1
+  m_OverrideGenerateLinks: 0
+  m_GenerateLinks: 0
+  m_IgnoreFromBuild: 0
+  m_ApplyToChildren: 1
+  m_AffectedAgents: ffffffff
 --- !u!1001 &978299503
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1110,7 +1131,7 @@ Transform:
   m_GameObject: {fileID: 1489893462}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5, y: -0.5, z: 0.5}
+  m_LocalPosition: {x: 0, y: -0.5, z: 0}
   m_LocalScale: {x: 40, y: 1, z: 40}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1224,8 +1245,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy01
   prefabs:
-  - {fileID: 2616831413808339793, guid: 3af13e895546e0c4b9f853603f0353e3, type: 3}
-  - {fileID: 6522853496634437842, guid: 24fcb06c1bced6c4893e4085cc3b7529, type: 3}
+  - {fileID: 5093768574565651215, guid: 16e01dc60785e4eb59cba9834f925aeb, type: 3}
+  - {fileID: 1728678501832321831, guid: 6a6b36f79af794cdbb4be3f69b5b595a, type: 3}
   enemy: []
   manager: {fileID: 1494998988}
 --- !u!4 &1592902455
