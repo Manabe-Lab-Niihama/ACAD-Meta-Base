@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour
 
     public GameState state;
 
-    private int count;
+    public int count;
 
     private float starttime;
 
