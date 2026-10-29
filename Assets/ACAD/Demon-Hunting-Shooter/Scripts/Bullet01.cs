@@ -51,7 +51,7 @@ public class Bullet01 : MonoBehaviour
             if (oni != null)
             {
                 manager.BossHP -= 10;
-                Debug.Log($"HP{manager.BossHP}");
+                Debug.Log($"{manager.BossHP}");
 
                 if(manager.BossHP == 0)
                 {
