@@ -39,7 +39,20 @@ public class Bullet01 : MonoBehaviour
             if (oni != null)
             {
                 Destroy(oni); 
-                manager.PlusCount();
+
+                manager.OniCount();
+            }
+        }
+
+        if (other.gameObject.CompareTag("BossEnemy"))
+        {
+            GameObject oni = other.gameObject;
+
+            if (oni != null)
+            {
+                Destroy(oni); 
+
+                manager.BossCount();
             }
         }
        

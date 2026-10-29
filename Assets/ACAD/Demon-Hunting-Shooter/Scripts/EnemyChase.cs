@@ -12,7 +12,7 @@ public class EnemyChase : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
 
-        GameObject player = GameObject.Find("XR Origin Hands (XR Rig)");
+        GameObject player = GameObject.Find("XR Origin Hands (XR Rig) DemonVersion");
 
         if (player != null)
         {

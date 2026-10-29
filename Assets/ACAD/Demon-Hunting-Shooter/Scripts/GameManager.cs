@@ -16,10 +16,15 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] GameObject start;
 
-    public void PlusCount()
+    public void OniCount()
     {
-        count++;
-        Debug.Log($"{count}");
+        count += 10;
+        //Debug.Log($"{count}");
+    }
+
+    public void BossCount()
+    {
+        count += 30;
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -49,6 +54,7 @@ public class GameManager : MonoBehaviour
                 state = GameState.Finish;
                 Debug.Log("フィニッシュ");
                 Debug.Log($"{nowtime-starttime:F2}");
+                Debug.Log($"{count}");
                 //Debug.Log($"{gametime:F2}");
             }
         }
