@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
 
     private float nowtime;
 
-    //private float gametime = 0f;
+    public float gametime = 0f;
 
     [SerializeField] GameObject start;
 
@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
         if (state == GameState.Playing)
         {
             nowtime = Time.time;
-            //gametime += Time.deltaTime;
+            gametime = nowtime-starttime;
             if(nowtime-starttime >= 60)
             {
                 state = GameState.Finish;

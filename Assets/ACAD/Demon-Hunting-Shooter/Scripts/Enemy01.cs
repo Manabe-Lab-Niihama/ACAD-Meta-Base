@@ -6,6 +6,10 @@ public class Enemy01 : MonoBehaviour
 
     [SerializeField] private GameObject[] enemy;
 
+    private float settime = 0f;
+
+    //[SerializeField] private GameObject boss;
+
     [SerializeField] private GameManager manager;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
@@ -17,7 +21,7 @@ public class Enemy01 : MonoBehaviour
 
     void Awake()
     {
-        enemy = new GameObject[10];
+        enemy = new GameObject[11];
     }
 
     // Update is called once per frame
@@ -29,10 +33,10 @@ public class Enemy01 : MonoBehaviour
             {
                 if (enemy[i] == null)
                 {
-                    int randomIndex = Random.Range(0, prefabs.Length);
+                    int randomIndex = Random.Range(0, prefabs.Length - 1);
 
-                    float x = Random.Range(-20f, 20f);
-                    float z = Random.Range(-20f, 20f);
+                    float x = Random.Range(-30f, 30f);
+                    float z = Random.Range(-30f, 30f);
 
                     Vector3 spawnPos = new Vector3(x, 0f, z);
 
@@ -40,15 +44,28 @@ public class Enemy01 : MonoBehaviour
                 }
                 
             }
+
+            if (manager.gametime >= settime && enemy[10] == null)
+            {
+                float x = Random.Range(-30f, 30f);
+                float z = Random.Range(-30f, 30f);
+
+                Vector3 spawnPos = new Vector3(x, 0f, z);
+
+                enemy[10] = Instantiate(prefabs[2], spawnPos, Quaternion.identity);
+
+                settime += 20f;
+            }
         }
 
         if (manager.state == GameState.Finish)
         {
-            for(int i = 0; i < 10; i++)
+            for(int i = 0; i < 11; i++)
             {
                 Destroy(enemy[i]);
                 
             }
+
         }
     }
 }
