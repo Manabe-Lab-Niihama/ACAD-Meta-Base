@@ -57,7 +57,7 @@ public class Enemy01 : MonoBehaviour
                 manager.BossHP = 50;
 
                 settime += 25f;
-                Debug.Log($"時間{settime}");
+                //Debug.Log($"時間{settime}");
             }
         }
 
