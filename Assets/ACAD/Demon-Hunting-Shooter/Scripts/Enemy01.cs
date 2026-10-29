@@ -6,7 +6,7 @@ public class Enemy01 : MonoBehaviour
 
     [SerializeField] private GameObject[] enemy;
 
-    private float settime = 0f;
+    private float settime = 5f;
 
     //[SerializeField] private GameObject boss;
 
@@ -54,7 +54,10 @@ public class Enemy01 : MonoBehaviour
 
                 enemy[10] = Instantiate(prefabs[2], spawnPos, Quaternion.identity);
 
-                settime += 20f;
+                manager.BossHP = 50;
+
+                settime += 25f;
+                Debug.Log($"時間{settime}");
             }
         }
 

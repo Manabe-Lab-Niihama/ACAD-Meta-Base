@@ -25,5 +25,6 @@ public class EnemyChase : MonoBehaviour
     void Update()
     {
         agent.SetDestination(PlayerTransform.position);
+
     }
 }

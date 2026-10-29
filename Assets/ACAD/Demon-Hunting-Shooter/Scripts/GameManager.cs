@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
 
     public float gametime = 0f;
 
+    public int BossHP;
+
     [SerializeField] GameObject start;
 
     public void OniCount()
@@ -54,7 +56,7 @@ public class GameManager : MonoBehaviour
                 state = GameState.Finish;
                 Debug.Log("フィニッシュ");
                 Debug.Log($"{nowtime-starttime:F2}");
-                Debug.Log($"{count}");
+                Debug.Log($"Score:{count}");
                 //Debug.Log($"{gametime:F2}");
             }
         }

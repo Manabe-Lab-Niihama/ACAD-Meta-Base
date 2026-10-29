@@ -50,9 +50,16 @@ public class Bullet01 : MonoBehaviour
 
             if (oni != null)
             {
-                Destroy(oni); 
+                manager.BossHP -= 10;
+                Debug.Log($"{manager.BossHP}");
 
-                manager.BossCount();
+                if(manager.BossHP == 0)
+                {
+                    Destroy(oni); 
+
+                    manager.BossCount();
+                }
+                
             }
         }
        
