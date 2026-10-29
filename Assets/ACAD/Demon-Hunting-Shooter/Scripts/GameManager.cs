@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour
 
     private float nowtime;
 
+    //private float gametime = 0f;
+
     [SerializeField] GameObject start;
 
     public void PlusCount()
@@ -23,6 +25,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         state = GameState.Redy;
+
     }
 
     // Update is called once per frame
@@ -40,11 +43,13 @@ public class GameManager : MonoBehaviour
         if (state == GameState.Playing)
         {
             nowtime = Time.time;
-            if(nowtime - starttime >= 60)
+            //gametime += Time.deltaTime;
+            if(nowtime-starttime >= 60)
             {
                 state = GameState.Finish;
                 Debug.Log("フィニッシュ");
                 Debug.Log($"{nowtime-starttime:F2}");
+                //Debug.Log($"{gametime:F2}");
             }
         }
     }

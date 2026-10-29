@@ -31,8 +31,8 @@ public class Enemy01 : MonoBehaviour
                 {
                     int randomIndex = Random.Range(0, prefabs.Length);
 
-                    float x = Random.Range(-8f, 8f);
-                    float z = Random.Range(-8f, 8f);
+                    float x = Random.Range(-20f, 20f);
+                    float z = Random.Range(-20f, 20f);
 
                     Vector3 spawnPos = new Vector3(x, 0f, z);
 

@@ -12,6 +12,13 @@ public class EnemyChase : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
 
+        GameObject player = GameObject.Find("XR Origin Hands (XR Rig)");
+
+        if (player != null)
+        {
+            PlayerTransform = player.transform;
+        }
+
     }
 
     // Update is called once per frame
