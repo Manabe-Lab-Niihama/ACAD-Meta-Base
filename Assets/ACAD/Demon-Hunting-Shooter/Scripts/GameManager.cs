@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
 
     public void BossCount()
     {
-        count += 30;
+        count += 50;
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

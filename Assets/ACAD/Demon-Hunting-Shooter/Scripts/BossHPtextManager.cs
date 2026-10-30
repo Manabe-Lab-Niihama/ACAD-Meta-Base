@@ -19,7 +19,7 @@ public class BossHPtextManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (manager.enemy[10] != null)
+        if (manager.enemy[30] != null)
         {
             BossHPText.text = "Boss HP:" + manager.BossHP.ToString();
 
