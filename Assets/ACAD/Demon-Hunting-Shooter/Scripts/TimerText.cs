@@ -24,7 +24,7 @@ public class TimerText : MonoBehaviour
         if(manager.state == GameState.Playing)
         {
             timeleft = 60f - manager.gametime;
-            timerText.text = "" + timeleft.ToString("F1");
+            timerText.text = "" + timeleft.ToString("F2");
         }
         else if(manager.state == GameState.Finish)
         {

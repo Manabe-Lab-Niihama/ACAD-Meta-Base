@@ -13,12 +13,16 @@ public class ScoreManager : MonoBehaviour
     void Start()
     {
         scoreText = GetComponent<TMP_Text>();
-        scoreText.text = "Score:0";
+        scoreText.text = "";
     }
 
     // Update is called once per frame
     void Update()
     {
-        scoreText.text = "Score:" + manager.count.ToString();
+        if(manager.state != GameState.Redy )
+        {
+            scoreText.text = "Score:" + manager.count.ToString();
+        }
+        
     }
 }

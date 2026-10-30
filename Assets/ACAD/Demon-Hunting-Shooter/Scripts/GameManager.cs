@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
 
     public float gametime = 0f;
 
-    public float bosstime;
+    //public float bosstime;
 
     public int BossHP;
 
@@ -47,7 +47,7 @@ public class GameManager : MonoBehaviour
             state = GameState.Playing;
             Debug.Log("スタート");
             starttime = Time.time;
-            Debug.Log($"{starttime:F2}");
+            //Debug.Log($"{starttime:F2}");
 
         }
 
@@ -59,7 +59,7 @@ public class GameManager : MonoBehaviour
             {
                 state = GameState.Finish;
                 Debug.Log("フィニッシュ");
-                Debug.Log($"{nowtime-starttime:F2}");
+                //Debug.Log($"{nowtime-starttime:F2}");
                 Debug.Log($"Score:{count}");
                 //Debug.Log($"{gametime:F2}");
             }

@@ -51,7 +51,7 @@ public class Bullet01 : MonoBehaviour
             if (oni != null)
             {
                 manager.BossHP -= 10;
-                Debug.Log($"{manager.BossHP}");
+                //Debug.Log($"{manager.BossHP}");
 
                 if(manager.BossHP == 0)
                 {
@@ -59,7 +59,7 @@ public class Bullet01 : MonoBehaviour
 
                     manager.BossCount();
 
-                    manager.bosstime = manager.gametime;
+                    //manager.bosstime = manager.gametime;
                 }
                 
             }
