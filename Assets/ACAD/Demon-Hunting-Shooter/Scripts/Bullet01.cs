@@ -58,6 +58,8 @@ public class Bullet01 : MonoBehaviour
                     Destroy(oni); 
 
                     manager.BossCount();
+
+                    manager.bosstime = manager.gametime;
                 }
                 
             }

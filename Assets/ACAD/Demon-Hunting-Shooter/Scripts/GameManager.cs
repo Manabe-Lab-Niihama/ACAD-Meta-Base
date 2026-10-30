@@ -6,6 +6,8 @@ public class GameManager : MonoBehaviour
 
     public GameState state;
 
+    [SerializeField] public GameObject[] enemy;
+
     public int count;
 
     private float starttime;
@@ -13,6 +15,8 @@ public class GameManager : MonoBehaviour
     private float nowtime;
 
     public float gametime = 0f;
+
+    public float bosstime;
 
     public int BossHP;
 

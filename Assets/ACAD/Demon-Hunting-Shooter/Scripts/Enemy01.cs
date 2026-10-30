@@ -4,7 +4,6 @@ public class Enemy01 : MonoBehaviour
 {
     [SerializeField] GameObject[] prefabs;
 
-    [SerializeField] private GameObject[] enemy;
 
     private float settime = 5f;
 
@@ -21,7 +20,7 @@ public class Enemy01 : MonoBehaviour
 
     void Awake()
     {
-        enemy = new GameObject[11];
+        manager.enemy = new GameObject[11];
     }
 
     // Update is called once per frame
@@ -31,7 +30,7 @@ public class Enemy01 : MonoBehaviour
         {
             for(int i = 0; i < 10; i++)
             {
-                if (enemy[i] == null)
+                if (manager.enemy[i] == null)
                 {
                     int randomIndex = Random.Range(0, prefabs.Length - 1);
 
@@ -40,19 +39,19 @@ public class Enemy01 : MonoBehaviour
 
                     Vector3 spawnPos = new Vector3(x, 0f, z);
 
-                    enemy[i] = Instantiate(prefabs[randomIndex], spawnPos, Quaternion.identity);
+                    manager.enemy[i] = Instantiate(prefabs[randomIndex], spawnPos, Quaternion.identity);
                 }
                 
             }
 
-            if (manager.gametime >= settime && enemy[10] == null)
+            if (manager.gametime >= settime && manager.enemy[10] == null)
             {
                 float x = Random.Range(-30f, 30f);
                 float z = Random.Range(-30f, 30f);
 
                 Vector3 spawnPos = new Vector3(x, 0f, z);
 
-                enemy[10] = Instantiate(prefabs[2], spawnPos, Quaternion.identity);
+                manager.enemy[10] = Instantiate(prefabs[2], spawnPos, Quaternion.identity);
 
                 manager.BossHP = 50;
 
@@ -65,7 +64,7 @@ public class Enemy01 : MonoBehaviour
         {
             for(int i = 0; i < 11; i++)
             {
-                Destroy(enemy[i]);
+                Destroy(manager.enemy[i]);
                 
             }
 
